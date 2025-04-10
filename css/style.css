@@ -1,0 +1,162 @@
+/* 기본 스타일 초기화 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* font-family: Arial, sans-serif; */
+    /* font-family: 'Inter', 'Noto Sans KR', sans-serif; */
+    font-family: 'Achivo', sans-serif;
+    /* border: 1px solid black; */
+}
+
+/* color map
+
+
+붉은흰색: #fef1f3
+다홍색: #e9395d
+연한다홍색: #fff0f3
+진한파란색: #0d4b59
+파란색: #23869e
+연한파랑색: #f0fbff
+진한똥색(글씨용): #590d22
+똥색: #a67c27
+연한똥색: #fffbf0
+진한검은색 (글씨용): #2d2107
+
+*/
+
+
+
+/* 전체 레이아웃 */
+body {
+    /* 줄간격 */
+    line-height: 1.6;
+    background-color: #fff0f3;
+    color: #2d2107;
+}
+
+/* 헤더 스타일 */
+header {
+    background: #e9395d;
+    padding: 1rem 2rem;
+    display: flex;
+    /* 가운데 정렬 (세로방향) */
+    align-items: center;
+    /* 양쪽 끝 정렬 (가로방향) */
+    justify-content: space-between;
+    border-bottom: 1px solid #ddd;
+}
+
+
+.other-head {
+    text-align: left;
+    background: #23869e;
+    color: #2d2107;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 70px 50px;
+    margin: 0px 0px;
+}
+
+.header-logo {
+    height: 4rem;
+    width: auto;
+}
+
+/* 로고 스타일 */
+/* .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+} */
+
+/* 네비게이션 스타일 */
+nav {
+    flex-grow: 1;
+    text-align: right;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-left: 20px;
+}
+
+nav ul li a {
+    color: #fef1f3;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: x-large;
+    font-family: 'Staatliches', sans-serif;
+}
+
+nav ul li.active a {
+    color: #2d2107;
+}
+
+
+nav ul li a:hover {
+    color: #2d2107;
+}
+
+
+/* 메인 섹션 스타일 */
+main {
+    text-align: center;
+}
+
+.intro {
+    font-size: 2rem;
+    text-align: center;
+    margin: 50px 200px;
+}
+
+
+.contact {
+    width: 100%;
+    background-color: #0d4b59;
+    padding: 20px 0;
+}
+
+.contact-title {
+    text-align: left;
+    color: whitesmoke;
+    box-sizing: border-box;
+    /* TOP RIGHT BOTTOM LEFT */
+    margin: 50px 50px 25px 50px;
+}
+
+.contact-main {
+    text-align: left;
+    color: whitesmoke;
+    box-sizing: border-box;
+    margin: 25px 50px 50px 50px;
+    font-family: 'Archivo', sans-serif;
+}
+
+
+
+footer {
+    width: 100%;
+    background-color: #a67c27;
+    padding: 20px 0;
+}
+
+/* 푸터 스타일 */
+.footer-cr {
+    color: whitesmoke;
+    text-align: center;
+    /* display: flex; */
+    justify-content: space-between;
+    align-items: center;
+    margin: 50px 50px;
+}
+
+.footer-logo {
+    /* height: 140px; */
+    height: auto;
+    width: auto;
+}

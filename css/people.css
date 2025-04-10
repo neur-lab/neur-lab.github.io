@@ -1,0 +1,78 @@
+.people-category {
+    text-align: left;
+    /* background: white; */
+    margin: 50px 50px 20px 50px;
+    border-bottom: 2px solid #e9395d;
+}
+
+
+.member-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 50px;
+}
+
+/* 개별 멤버 박스 스타일 */
+.member {
+    display: flex;
+    /* align-items: center; */
+    /* justify-content: space-between; */
+    margin: 50px 100px;
+}
+
+.photo-frame-outer {
+    padding: 8px;
+    border: 3px solid #e9395d;
+    padding: 8px 8px;
+    margin: 10px 30px 10px 0px;
+}
+
+.photo-frame-inner {
+    padding: 8px;
+    border: 2px solid #590d22;
+    padding: 15px 15px;
+}
+
+
+.photo {
+    /* display: block; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    /* border-radius: 50%; */
+    /* padding: 2px 2px; */
+    /* margin: 5px 5px; */
+}
+
+.member-info {
+    margin: 10px 0px;
+}
+
+.name {
+    text-align: left;
+    font-weight: bold;
+    font-size: 1rem;
+    color: #2d2107;
+}
+
+.position {
+    text-align: left;
+    font-size: 1rem;
+    font-weight: normal;
+    color: #0d4b59;
+}
+
+.email {
+    text-align: left;
+    font-size: 1rem;
+    color: #2d2107;
+}
+
+.ext-link {
+    text-align: left;
+    font-size: 1rem;
+    color: #590d22;
+}
