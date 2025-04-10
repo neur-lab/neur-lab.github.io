@@ -111,7 +111,8 @@ main {
 .intro {
     font-size: 2rem;
     text-align: center;
-    margin: 50px 200px;
+    margin: 50px auto;
+    max-width: 90%;
 }
 
 
