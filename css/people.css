@@ -76,3 +76,24 @@
     font-size: 1rem;
     color: #590d22;
 }
+
+@media screen and (max-width: 768px) {
+    .member-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .member {
+        flex-direction: column;
+        margin: 20px;
+        align-items: center;
+        text-align: center;
+    }
+
+    .photo-frame-outer {
+        margin: 0 0 20px 0;
+    }
+
+    .member-info {
+        margin: 0;
+    }
+}
