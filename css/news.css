@@ -1,3 +1,105 @@
-.news-main {
-    margin: 100px 100px;
+/* --- 기존 news 스타일 --- */
+
+.news-main ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.news-main li {
+    margin-bottom: 20px;
+}
+
+.news-block {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: #fffdf8;
+    text-align: justify;
+    line-height: 1.6;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    border-left: 4px solid #a67c27;
+}
+
+.news-wrapper {
+    max-width: 800px;
+    margin: 40px auto;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #a67c27;
+}
+
+.news-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: 'Archivo', sans-serif;
+}
+
+.news-header h4 {
+    margin: 0;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.news-date {
+    font-size: 0.9rem;
+    color: #888;
+    margin: 0;
+}
+
+.news-toggle {
+    margin: 10px 0;
+    padding: 8px 12px;
+    font-family: 'Archivo', sans-serif;
+    cursor: pointer;
+    background-color: #eee;
+    border: none;
+    transition: background-color 0.2s;
+}
+
+.news-toggle:hover {
+    background-color: #ddd;
+}
+
+
+/* --- intro 영역 전용 스타일 (계층 강조, intro.css 기반) --- */
+
+.news-block .intro-wrapper {
+    padding: 0;  /* news-block에서 이미 padding 있음 */
+    background-color: transparent;
+    box-shadow: none;
+    margin: 0;
+}
+
+.news-block .intro-wrapper h2 {
+    font-size: 1.8rem;
+    border-bottom: 2px solid #a67c27;
+    padding-bottom: 6px;
+    margin-top: 40px;
+    font-family: 'Archivo', sans-serif;
+}
+
+.news-block .intro-wrapper h3 {
+    font-size: 1.4rem;
+    color: #333;
+    margin-top: 24px;
+}
+
+.news-block .intro-wrapper h4 {
+    font-size: 1.2rem;
+    color: #555;
+    margin-top: 20px;
+}
+
+.news-block .intro-wrapper p,
+.news-block .intro-wrapper ul {
+    font-size: 1rem;
+    line-height: 1.7;
+    color: #222;
+    text-align: justify;
+    margin-top: 10px;
+}
+
+.news-block .intro-wrapper ul {
+    padding-left: 20px;
+    list-style-type: disc;
 }

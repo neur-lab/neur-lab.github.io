@@ -65,6 +65,14 @@
     color: #0d4b59;
 }
 
+.affiliation {
+    text-align: left;
+    font-size: 1rem;
+    font-weight: normal;
+    color: #0d4b59;
+}
+
+
 .email {
     text-align: left;
     font-size: 1rem;
