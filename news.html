@@ -58,7 +58,13 @@
 
                     const header = document.createElement("div");
                     header.classList.add("news-header");
-                    header.innerHTML = `<h4>${title}</h4><p class="news-date">${date}</p>`;
+                    header.innerHTML = `
+                    <div class="news-title">${title}</div>
+                    <div class="news-meta">
+                        <span class="news-date">${date}</span>
+                        <button class="copy-link" title="Copy link">🔗</button>
+                    </div>
+                    `;
 
                     const toggleBtn = document.createElement("button");
                     toggleBtn.classList.add("news-toggle");
@@ -80,6 +86,15 @@
                             // 닫을 때: hash 제거
                             history.replaceState(null, null, " ");
                         }
+                    };
+
+                    const copyBtn = header.querySelector(".copy-link");
+                    copyBtn.onclick = () => {
+                        const url = `${location.origin}${location.pathname}#${encodeURIComponent(title)}`;
+                        navigator.clipboard.writeText(url).then(() => {
+                            copyBtn.innerText = "✅";
+                            setTimeout(() => copyBtn.innerText = "🔗", 1500);
+                        });
                     };
 
                     wrapper.appendChild(header);
