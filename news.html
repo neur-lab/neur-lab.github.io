@@ -41,15 +41,13 @@
     <script src="js/main.js"></script>
     <script>
         const newsList = [
-            { file: 'news/intern_2502.html', title: '2025년 2학기 학부연구생 모집', date: '2024-06-23' },
-            { file: 'news/intro.html', title: 'Lab Overview', date: '2024-06-23' },
-            // { file: 'news/important-papers.html', title: 'Important Papers', date: '2024-06-13' },
-
+            { file: 'news/intern_2502.html', title: '2025년 2학기 학부연구생 모집', date: '2024-06-23', slug: "intern-2025-fall"},
+            { file: 'news/intro.html', title: 'Lab Overview', date: '2024-06-23', slug: "lab-overview" },
         ];
 
         const container = document.getElementById("news-container");
 
-        newsList.forEach(({ file, title, date }, index) => {
+        newsList.forEach(({ file, title, date, slug}, index) => {
             fetch(file)
                 .then(res => res.text())
                 .then(html => {
@@ -81,7 +79,7 @@
 
                         if (isHidden) {
                             // 열릴 때: hash 업데이트
-                            history.replaceState(null, null, "#" + encodeURIComponent(title));
+                            history.replaceState(null, null, "#" + slug);
                         } else {
                             // 닫을 때: hash 제거
                             history.replaceState(null, null, " ");
@@ -90,7 +88,7 @@
 
                     const copyBtn = header.querySelector(".copy-link");
                     copyBtn.onclick = () => {
-                        const url = `${location.origin}${location.pathname}#${encodeURIComponent(title)}`;
+                        const url = `${location.origin}${location.pathname}#${slug}`;
                         navigator.clipboard.writeText(url).then(() => {
                             copyBtn.innerText = "✅";
                             setTimeout(() => copyBtn.innerText = "🔗", 1500);
@@ -103,7 +101,7 @@
                     container.appendChild(wrapper);
 
                     const currentHash = decodeURIComponent(location.hash.replace("#", "").trim());
-                    if (currentHash && currentHash === title) {
+                    if (currentHash && currentHash === slug) {
                         content.style.display = "block";
                     }
                 });
